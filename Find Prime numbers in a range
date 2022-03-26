@@ -1,0 +1,38 @@
+class Solution {
+    static boolean isprime(int n)
+    {
+        if(n==1)
+        {
+            return false;
+        }
+        for(int i=2;i<=Math.sqrt(n);i++)
+        {
+            if(n%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    ArrayList<Integer> primeRange(int M, int N) {
+        // code here
+        //int[] a=new int[N];
+        ArrayList<Integer> a =new ArrayList<Integer>(N);
+        int[] p=new int[N+1];
+        for(int i=0;i<N;i++)
+        {
+            p[i]=1;
+        }
+       // int c=0;
+       for(int i=M;i<=N;i++)
+       {
+          // System.out.print(1);
+           if(isprime(i))
+           {
+              // System.out.print(2);
+               a.add(i);
+           }
+       }
+       return a;
+    }
+}
