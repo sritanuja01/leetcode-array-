@@ -1,0 +1,28 @@
+class GFG
+{
+    long findIndex(long arr[] ,int X,int Y,int N)
+    {
+        
+        // Your code goes here
+        int a=0,b=0;
+        int index=-1;
+       // Arrays.sort(arr);
+        for(int i=0;i<N;i++)
+        {
+            if(arr[i]==X)
+            {
+                a++;
+            }
+            if(arr[i]==Y)
+            {
+                b++;
+            }
+            if(a==b&&a!=0)
+            {
+                index=i;
+            }
+            
+        }
+        return index;
+    }
+}
